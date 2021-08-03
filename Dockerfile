@@ -10,6 +10,7 @@ WORKDIR $WORKING_DIRECTORY
 
 # Copy our files
 COPY build/libs/NanoLimbo-*-all.jar $WORKING_DIRECTORY/server.jar
+COPY settings.yml $WORKING_DIRECTORY/settings.yml
 
 # Create a custom user so we don't run as root
 RUN groupadd ${USER} && \
